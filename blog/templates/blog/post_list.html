@@ -9,7 +9,15 @@
     <h1><a href="">kakaru</a></h1>
   </div>
 
-  <div>
+  {% for post in posts %}
+    <div>
+      <p>published: {{ post.published_date }}</p>
+      <h1><a href="">{{ post.title }}</a></h1>
+      <p>{{ post.text|linebreaksbr }}</p>    
+    </div>
+  {% endfor %}
+
+  <!-- <div>
     <p>published: 21.02.2018, 17:13</p>
     <h2><a href="">My first post</a></h2>
     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid labore consequatur, voluptas delectus nemo, veniam dignissimos optio fuga impedit dolorum facere nam perferendis alias vero ipsam iste, quasi nulla! Est!</p>
@@ -19,6 +27,6 @@
       <p>published: 21.02.2018, 17:13</p>
       <h2><a href="">My second post</a></h2>
       <p>Hello world! simple?</p>
-  </div>
+  </div> -->
 </body>
 </html>
